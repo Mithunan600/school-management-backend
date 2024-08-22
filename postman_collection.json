@@ -1,0 +1,69 @@
+{
+    "info": {
+      "name": "School Management API",
+      "_postman_id": "c58b9c8f-8b42-4f6d-b7e6-f4f8f2179f23",
+      "description": "Collection for testing School Management APIs",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Add School",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "type": "text"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"name\": \"ABC School\",\n  \"address\": \"123 Main St, City\",\n  \"latitude\": 37.7749,\n  \"longitude\": -122.4194\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/addSchool",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "addSchool"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "List Schools",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:3000/listSchools?latitude=37.7749&longitude=-122.4194",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "listSchools"
+            ],
+            "query": [
+              {
+                "key": "latitude",
+                "value": "37.7749"
+              },
+              {
+                "key": "longitude",
+                "value": "-122.4194"
+              }
+            ]
+          }
+        },
+        "response": []
+      }
+    ]
+  }
+  
